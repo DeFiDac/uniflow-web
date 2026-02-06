@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -20,7 +19,7 @@ const fadeInUp = {
     y: 0,
     transition: {
       duration: 0.8,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };

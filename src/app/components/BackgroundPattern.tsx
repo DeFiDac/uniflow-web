@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'motion/react';
 
 export function BackgroundPattern() {
@@ -6,7 +5,7 @@ export function BackgroundPattern() {
     <div className="fixed inset-0 -z-10">
       {/* Deep gradient base */}
       <div className="absolute inset-0 bg-background" />
-      
+
       {/* Animated gradient orbs */}
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
@@ -17,7 +16,7 @@ export function BackgroundPattern() {
           background: 'radial-gradient(circle, rgba(52, 211, 153, 0.4), transparent 70%)',
         }}
       />
-      
+
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.25, scale: 1 }}
@@ -27,7 +26,7 @@ export function BackgroundPattern() {
           background: 'radial-gradient(circle, rgba(45, 212, 191, 0.3), transparent 70%)',
         }}
       />
-      
+
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 0.2, scale: 1 }}
@@ -37,7 +36,7 @@ export function BackgroundPattern() {
           background: 'radial-gradient(circle, rgba(34, 197, 94, 0.25), transparent 70%)',
         }}
       />
-      
+
       {/* Geometric grid pattern */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -52,9 +51,9 @@ export function BackgroundPattern() {
           backgroundSize: '80px 80px',
         }}
       />
-      
+
       {/* Radial gradient overlay for depth */}
-      <div 
+      <div
         className="absolute inset-0"
         style={{
           background: 'radial-gradient(circle at 50% 50%, transparent 0%, var(--background) 100%)',

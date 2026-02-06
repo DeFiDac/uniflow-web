@@ -1,4 +1,3 @@
-import React from 'react';
 import { Wallet, TrendingUp, Search, Zap } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { motion } from 'motion/react';
@@ -64,7 +63,7 @@ const item = {
     y: 0,
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
@@ -80,9 +79,9 @@ export function FeaturesSection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 
+          <h2
             className="text-4xl sm:text-5xl font-bold mb-4 text-foreground"
-            style={{ 
+            style={{
               fontFamily: 'var(--font-serif)',
             }}
           >
@@ -112,19 +111,19 @@ export function FeaturesSection() {
         >
           {features.map((feature, index) => (
             <motion.div key={index} variants={item}>
-              <Card 
+              <Card
                 className="border border-border backdrop-blur-sm hover:shadow-2xl transition-all duration-500 group relative overflow-hidden h-full bg-card"
                 style={{
                   boxShadow: 'var(--shadow-md)',
                 }}
               >
                 {/* Hover gradient effect */}
-                <div 
+                <div
                   className={`absolute inset-0 bg-gradient-to-br ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}
                 />
-                
+
                 <CardHeader className="relative z-10">
-                  <div 
+                  <div
                     className={`w-12 h-12 rounded-lg flex items-center justify-center mb-4 bg-gradient-to-br ${feature.gradient}`}
                     style={{
                       boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
@@ -132,15 +131,15 @@ export function FeaturesSection() {
                   >
                     <feature.icon className="w-6 h-6 text-white" />
                   </div>
-                  <CardTitle 
+                  <CardTitle
                     className="text-xl mb-2 text-card-foreground"
-                    style={{ 
+                    style={{
                       fontFamily: 'var(--font-serif)',
                     }}
                   >
                     {feature.title}
                   </CardTitle>
-                  <CardDescription 
+                  <CardDescription
                     className="text-base text-muted-foreground"
                   >
                     {feature.description}

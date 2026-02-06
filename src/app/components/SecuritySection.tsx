@@ -1,4 +1,3 @@
-import React from 'react';
 import { Shield, Lock, Zap, Key } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -20,7 +19,7 @@ const item = {
     x: 0,
     transition: {
       duration: 0.6,
-      ease: [0.22, 1, 0.36, 1],
+      ease: [0.22, 1, 0.36, 1] as const,
     },
   },
 };
@@ -36,9 +35,9 @@ export function SecuritySection() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 
+          <h2
             className="text-4xl sm:text-5xl font-bold mb-4 text-foreground"
-            style={{ 
+            style={{
               fontFamily: 'var(--font-serif)',
             }}
           >
@@ -72,9 +71,9 @@ export function SecuritySection() {
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
+
             <div className="flex items-center gap-3 mb-6 relative z-10">
-              <div 
+              <div
                 className="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-primary to-chart-2"
                 style={{
                   boxShadow: '0 4px 20px rgba(52, 211, 153, 0.4)',
@@ -82,16 +81,16 @@ export function SecuritySection() {
               >
                 <Lock className="w-6 h-6 text-white" />
               </div>
-              <h3 
+              <h3
                 className="text-2xl font-bold text-card-foreground"
-                style={{ 
+                style={{
                   fontFamily: 'var(--font-serif)',
                 }}
               >
                 Secure by Design
               </h3>
             </div>
-            
+
             <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-4 relative z-10">
               <motion.div variants={item} className="flex gap-3">
                 <Shield className="w-5 h-5 flex-shrink-0 mt-1 text-primary" />
@@ -104,7 +103,7 @@ export function SecuritySection() {
                   </p>
                 </div>
               </motion.div>
-              
+
               <motion.div variants={item} className="flex gap-3">
                 <Key className="w-5 h-5 flex-shrink-0 mt-1 text-chart-2" />
                 <div>
@@ -112,12 +111,12 @@ export function SecuritySection() {
                     Privy-Powered AI Agent Wallet
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    UniFlow operates an autonomous AI agent wallet that executes onchain transactions 
+                    UniFlow operates an autonomous AI agent wallet that executes onchain transactions
                     on Uniswap V4 independently with strict policy controls and security guardrails
                   </p>
                 </div>
               </motion.div>
-              
+
               <motion.div variants={item} className="flex gap-3">
                 <Shield className="w-5 h-5 flex-shrink-0 mt-1 text-primary" />
                 <div>
@@ -129,7 +128,7 @@ export function SecuritySection() {
                   </p>
                 </div>
               </motion.div>
-              
+
               <motion.div variants={item} className="flex gap-3">
                 <Lock className="w-5 h-5 flex-shrink-0 mt-1 text-chart-3" />
                 <div>
@@ -156,9 +155,9 @@ export function SecuritySection() {
             }}
           >
             <div className="absolute inset-0 bg-gradient-to-br from-chart-2/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            
+
             <div className="flex items-center gap-3 mb-6 relative z-10">
-              <div 
+              <div
                 className="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-chart-2 to-chart-3"
                 style={{
                   boxShadow: '0 4px 20px rgba(45, 212, 191, 0.4)',
@@ -166,20 +165,20 @@ export function SecuritySection() {
               >
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <h3 
+              <h3
                 className="text-2xl font-bold text-card-foreground"
-                style={{ 
+                style={{
                   fontFamily: 'var(--font-serif)',
                 }}
               >
                 Seamless User Experience
               </h3>
             </div>
-            
+
             <motion.div variants={container} initial="hidden" whileInView="visible" viewport={{ once: true }} className="space-y-4 relative z-10">
               <motion.div variants={item} className="flex gap-3">
                 <svg className="w-5 h-5 flex-shrink-0 mt-1 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c.018.198.026.396.026.595 0 6.068-4.618 13.064-13.064 13.064-2.593 0-5.005-.758-7.036-2.059.359.042.725.063 1.095.063 2.149 0 4.126-.734 5.693-1.965-2.008-.037-3.701-1.364-4.286-3.187.281.054.569.082.866.082.42 0 .827-.057 1.213-.162-2.098-.421-3.679-2.276-3.679-4.501v-.058c.619.344 1.326.551 2.079.575-1.231-.823-2.041-2.228-2.041-3.821 0-.841.226-1.631.622-2.312 2.262 2.777 5.638 4.602 9.446 4.794-.078-.336-.119-.686-.119-1.045 0-2.532 2.053-4.585 4.585-4.585 1.319 0 2.51.557 3.346 1.447 1.044-.205 2.027-.586 2.913-1.109-.343 1.071-1.07 1.968-2.017 2.535.927-.111 1.81-.357 2.633-.722-.615.92-1.393 1.727-2.291 2.374z"/>
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c.018.198.026.396.026.595 0 6.068-4.618 13.064-13.064 13.064-2.593 0-5.005-.758-7.036-2.059.359.042.725.063 1.095.063 2.149 0 4.126-.734 5.693-1.965-2.008-.037-3.701-1.364-4.286-3.187.281.054.569.082.866.082.42 0 .827-.057 1.213-.162-2.098-.421-3.679-2.276-3.679-4.501v-.058c.619.344 1.326.551 2.079.575-1.231-.823-2.041-2.228-2.041-3.821 0-.841.226-1.631.622-2.312 2.262 2.777 5.638 4.602 9.446 4.794-.078-.336-.119-.686-.119-1.045 0-2.532 2.053-4.585 4.585-4.585 1.319 0 2.51.557 3.346 1.447 1.044-.205 2.027-.586 2.913-1.109-.343 1.071-1.07 1.968-2.017 2.535.927-.111 1.81-.357 2.633-.722-.615.92-1.393 1.727-2.291 2.374z" />
                 </svg>
                 <div>
                   <p className="font-semibold mb-1 text-foreground">
@@ -190,7 +189,7 @@ export function SecuritySection() {
                   </p>
                 </div>
               </motion.div>
-              
+
               <motion.div variants={item} className="flex gap-3">
                 <Zap className="w-5 h-5 flex-shrink-0 mt-1 text-chart-2" />
                 <div>
@@ -202,7 +201,7 @@ export function SecuritySection() {
                   </p>
                 </div>
               </motion.div>
-              
+
               <motion.div variants={item} className="flex gap-3">
                 <svg className="w-5 h-5 flex-shrink-0 mt-1 text-chart-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
@@ -216,7 +215,7 @@ export function SecuritySection() {
                   </p>
                 </div>
               </motion.div>
-              
+
               <motion.div variants={item} className="flex gap-3">
                 <Shield className="w-5 h-5 flex-shrink-0 mt-1 text-primary" />
                 <div>
@@ -244,10 +243,10 @@ export function SecuritySection() {
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-chart-2/5 to-chart-3/5" />
-          
-          <h3 
+
+          <h3
             className="text-2xl font-bold mb-6 text-center relative z-10 text-foreground"
-            style={{ 
+            style={{
               fontFamily: 'var(--font-serif)',
             }}
           >
