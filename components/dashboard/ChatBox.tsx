@@ -19,6 +19,7 @@ export function ChatBox() {
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messageIdCounter = useRef(2);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
@@ -32,7 +33,7 @@ export function ChatBox() {
     if (!inputValue.trim()) return;
 
     const userMessage: Message = {
-      id: Date.now().toString(),
+      id: String(messageIdCounter.current++),
       role: 'user',
       content: inputValue,
     };
@@ -44,7 +45,7 @@ export function ChatBox() {
     // Mock AI response
     setTimeout(() => {
       const agentMessage: Message = {
-        id: (Date.now() + 1).toString(),
+        id: String(messageIdCounter.current++),
         role: 'agent',
         content: getMockResponse(userMessage.content),
       };
