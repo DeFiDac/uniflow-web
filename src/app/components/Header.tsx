@@ -34,12 +34,26 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             <a
               href="#features"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('features')?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                });
+              }}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               Features
             </a>
             <a
               href="#security"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('security')?.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start',
+                });
+              }}
               className="text-sm text-muted-foreground hover:text-primary transition-colors"
             >
               Security
@@ -54,7 +68,7 @@ export function Header() {
             </a>
           </nav>
           <a
-            href="https://t.me/UniFlowOfficialBot"
+            href="https://github.com/DeFiDac/uniflow-skills"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2 rounded-lg font-semibold text-sm hover:shadow-lg transition-all relative overflow-hidden group bg-primary text-primary-foreground inline-flex items-center justify-center"
@@ -62,7 +76,7 @@ export function Header() {
               boxShadow: '0 4px 20px rgba(52, 211, 153, 0.3)',
             }}
           >
-            <span className="relative z-10">Chat with our Telegram Bot</span>
+            <span className="relative z-10">Deploy Your Own Chatbot</span>
             <div className="absolute inset-0 bg-gradient-to-r from-chart-2 to-chart-3 opacity-0 group-hover:opacity-100 transition-opacity" />
           </a>
         </div>

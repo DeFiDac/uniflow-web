@@ -52,10 +52,17 @@ export function Footer() {
               Product
             </h4>
             <ul className="space-y-2">
-              {['Features', 'Security', 'Pricing'].map((item, idx) => (
+              {['Features', 'Security'].map((item, idx) => (
                 <li key={idx}>
                   <a
                     href={`#${item.toLowerCase()}`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      document.getElementById(item.toLowerCase())?.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                      });
+                    }}
                     className="text-muted-foreground hover:text-primary hover:underline transition-colors"
                   >
                     {item}
@@ -77,7 +84,9 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://github.com/DeFiDac/uniflow-skills"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary hover:underline transition-colors"
                 >
                   Documentation
@@ -95,7 +104,9 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://github.com/DeFiDac/uniflow-skills/issues"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-primary hover:underline transition-colors"
                 >
                   Support

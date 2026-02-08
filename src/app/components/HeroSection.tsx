@@ -1,5 +1,5 @@
-import { ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Sparkles } from 'lucide-react';
 
 const staggerContainer = {
   hidden: { opacity: 0 },
@@ -97,8 +97,11 @@ export function HeroSection() {
             variants={fadeInUp}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <button
-              className="px-8 py-4 rounded-lg font-bold text-lg group relative overflow-hidden bg-primary text-primary-foreground transition-all"
+            <a
+              href="https://t.me/UniFlowOfficialBot"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-lg font-bold text-lg group relative overflow-hidden bg-primary text-primary-foreground transition-all inline-flex items-center justify-center"
               style={{
                 fontFamily: 'var(--font-sans)',
                 boxShadow: '0 8px 30px rgba(52, 211, 153, 0.4)',
@@ -106,13 +109,12 @@ export function HeroSection() {
             >
               <span className="relative z-10 flex items-center gap-2">
                 Start Optimizing Your Uniswap V4 Portfolio
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-chart-2 to-chart-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-            </button>
+            </a>
 
             <a
-              href="https://t.me/UniFlowOfficialBot"
+              href="https://github.com/DeFiDac/uniflow-skills"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-lg font-bold text-lg border-2 border-primary text-primary backdrop-blur-sm hover:bg-primary/10 transition-all inline-flex items-center justify-center"
@@ -120,7 +122,7 @@ export function HeroSection() {
                 fontFamily: 'var(--font-sans)',
               }}
             >
-              Chat with our Telegram Bot
+              Deploy Your Own Chatbot
             </a>
           </motion.div>
 
@@ -139,7 +141,7 @@ export function HeroSection() {
                   backgroundClip: 'text',
                 }}
               >
-                5+
+                4
               </div>
               <div className="text-muted-foreground">Chains Supported</div>
             </div>
