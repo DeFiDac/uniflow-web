@@ -257,7 +257,7 @@ export function SecuritySection() {
               'Real-time Uniswap V4 data-backed advice',
               'AI agent wallet powered by Privy',
               'Independent Uniswap V4 transaction execution with policy controls',
-              'Works across 5+ major chains running Uniswap V4',
+              'Works across 4 major chains running Uniswap V4',
               'Risk-aware V4 LP recommendations',
               'Telegram-native for ultimate convenience',
               'Secure infrastructure & best practices',
