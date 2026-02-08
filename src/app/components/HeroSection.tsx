@@ -141,7 +141,7 @@ export function HeroSection() {
                   backgroundClip: 'text',
                 }}
               >
-                4
+                5
               </div>
               <div className="text-muted-foreground">Chains Supported</div>
             </div>
