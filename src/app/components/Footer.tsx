@@ -1,5 +1,3 @@
-import { Sparkles } from 'lucide-react';
-
 export function Footer() {
   return (
     <footer
@@ -9,14 +7,14 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div
-                className="w-8 h-8 rounded-lg flex items-center justify-center bg-gradient-to-br from-primary to-chart-2"
+              <img
+                src="/logo.png"
+                alt="UniFlow"
+                className="w-8 h-8 rounded-xl object-cover"
                 style={{
                   boxShadow: '0 4px 20px rgba(52, 211, 153, 0.4)',
                 }}
-              >
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
+              />
               <span
                 className="text-xl font-semibold text-foreground"
                 style={{

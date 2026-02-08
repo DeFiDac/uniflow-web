@@ -1,4 +1,3 @@
-import { Sparkles } from 'lucide-react';
 import { motion } from 'motion/react';
 
 export function Header() {
@@ -15,15 +14,14 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-2">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center shadow-lg"
+            <img
+              src="/logo.png"
+              alt="UniFlow"
+              className="w-8 h-8 rounded-xl object-cover"
               style={{
-                background: 'linear-gradient(135deg, #34d399, #10b981)',
                 boxShadow: '0 4px 20px rgba(52, 211, 153, 0.4)',
               }}
-            >
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
+            />
             <span
               className="text-xl font-bold text-foreground"
               style={{ fontFamily: 'var(--font-serif)' }}
